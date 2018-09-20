@@ -20,3 +20,14 @@ resource "tfe_variable" "tfe_token" {
     workspace_id	= "${module.workspace.workspace_id}"
     sensitive	= true
 }
+
+variable "vault_aws_role" {
+    type="string"
+    default = "ec2_admin"
+}
+resource "tfe_variable" "vault_aws_role" {
+    key = "vault_aws_role"
+    value = "${var.vault_aws_role}"
+    category = "terraform"
+    workspace_id = "${module.workspace.workspace_id}"
+}
