@@ -22,3 +22,5 @@ resource "tfe_variable" "AWS_SECRET_ACCESS_KEY" {
   workspace_id = "${var.workspace_id}"
   sensitive = true
 }
+
+# testng confg in tfe
