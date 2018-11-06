@@ -23,4 +23,14 @@ resource "tfe_variable" "AWS_SECRET_ACCESS_KEY" {
   sensitive = true
 }
 
+resource "tfe_variable" "AWS_DEFAULT_REGION" {
+  key = "AWS_DEFAULT_REGION"
+  value = "us-east-1"
+  category = "env"
+  workspace_id = "${var.workspace_id}"
+  sensitive = true
+}
+
+
+
 # testng confg in tfe
